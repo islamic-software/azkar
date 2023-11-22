@@ -11,11 +11,11 @@ const Home: React.FC<{}> = () => {
           <div
             key={idx}
             className={cx(
-              "mb-8 flex items-start gap-4 py-4 px-2",
-              zkar.count === 0 && "bg-gray-50 rounded-md"
+              "py-6 flex items-start gap-4 px-2",
+              zkar.count === 0 && "bg-gray-100 dark:bg-gray-900 rounded-md"
             )}
           >
-            <div className="w-10 h-10 bg-gray-800 text-white flex items-center justify-center rounded-full shrink-0 shadow-lg">
+            <div className="w-10 h-10 bg-gray-800 dark:bg-gray-600 text-white flex items-center justify-center rounded-full shrink-0 shadow-lg">
               {idx + 1}
             </div>
             <div>
@@ -23,7 +23,7 @@ const Home: React.FC<{}> = () => {
                 {zkar.header && (
                   <p className="text-xs mb-1 text-gray-500">{zkar.header}</p>
                 )}
-                <p className="text-lg font-semi mb-1">
+                <p className="text-lg font-semi mb-1 dark:text-gray-400">
                   {"{" + zkar.body + "}"}
                 </p>
                 {zkar.reason && (
